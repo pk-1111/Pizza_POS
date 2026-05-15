@@ -57,4 +57,5 @@ Kyaw Kaung San
 
 Full-Stack Developer
 
-LinkedIn | Portfolio
+ LinkedIn: www.linkedin.com/in/kyaw-kaung-san
+ Portfolio: https://kks-portfolio.vercel.app
