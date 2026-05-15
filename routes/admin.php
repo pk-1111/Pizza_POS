@@ -23,13 +23,8 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin' ] ,function(){
          Route::get('update/{id}',[CategoryController::class,'updatePage'])->name('category#updatePage');
          Route::post('update/{id}',[CategoryController::class,'update'])->name('category#update');
 
-
-
-       //delete
-        Route::get('delete/{id}',[CategoryController::class,'delete'])->name('category#delete');
-
-
-
+         //delete
+         Route::get('delete/{id}',[CategoryController::class,'delete'])->name('category#delete');
 
     });
 
@@ -37,42 +32,28 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin' ] ,function(){
 
     // profile
 
-       Route::group(['prefix' => 'profile'],function(){
-       Route::get('changePassword',[ProfileController::class,'changePasswordPage'])->name('profile#changePasswordPage');
-       Route::post('changePassword',[ProfileController::class,'changePassword'])->name('profile#changePassword');
+        Route::group(['prefix' => 'profile'],function(){
+         Route::get('changePassword',[ProfileController::class,'changePasswordPage'])->name('profile#changePasswordPage');
+         Route::post('changePassword',[ProfileController::class,'changePassword'])->name('profile#changePassword');
 
-        Route::get('profile',[ProfileController::class,'profile'])->name('profile#accountProfile');
-        Route::get('profileEdit',[ProfileController::class,'profileEdit'])->name('profile#profileEdit');
-        Route::post('update',[ProfileController::class,'updateProfile'])->name('profile#updateProfile');
+         Route::get('profile',[ProfileController::class,'profile'])->name('profile#accountProfile');
+         Route::get('profileEdit',[ProfileController::class,'profileEdit'])->name('profile#profileEdit');
+         Route::post('update',[ProfileController::class,'updateProfile'])->name('profile#updateProfile');
 
          Route::group(['middleware' => 'superadmin'],function(){
             // new admin account
-         Route::get('add/newAdmin',[ProfileController::class,'createNewAdminAccount'])->name('profile#createNewAdminAccount');
-         Route::post('add/newAdmin',[ProfileController::class,'createAdminAccount'])->name('profile#createAdminAccount');
-         Route::get('admin/list',[ProfileController::class,'adminList'])->name('profile#adminList');
-         Route::get('user/list',[ProfileController::class,'userList'])->name('profile#userList');
+          Route::get('add/newAdmin',[ProfileController::class,'createNewAdminAccount'])->name('profile#createNewAdminAccount');
+          Route::post('add/newAdmin',[ProfileController::class,'createAdminAccount'])->name('profile#createAdminAccount');
+          Route::get('admin/list',[ProfileController::class,'adminList'])->name('profile#adminList');
+          Route::get('user/list',[ProfileController::class,'userList'])->name('profile#userList');
 
 
          //delete
         Route::get('delete/{id}',[ProfileController::class,'delete'])->name('profile#delete');
         // Route::get('delete/{id}',[ProfileController::class,'deleteUserList'])->name('profile#deleteUserList');
 
-
-
-
-
          });
-
-
-
-
-
-
-
      });
-
-
-
 
 
     // add products
@@ -84,18 +65,11 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin' ] ,function(){
        Route::get('update/page/{id}',[ProductController::class,'updatePage'])->name('product#updatePage');
        Route::post('update/page',[ProductController::class,'update'])->name('product#update');
 
-
-
-
        //detail product
          Route::get('detailProduct/{id}',[ProductController::class,'detailProduct'])->name('product#detailProduct');
 
-
-
         //delete
        Route::get('delete/{id}',[ProductController::class,'delete'])->name('product#delete');
-
-
 
     });
 
@@ -106,12 +80,6 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin' ] ,function(){
     Route::group(['prefix' => 'paymentMethod'],function(){
        Route::get('payment',[PaymentController::class,'adminPayment'])->name('paymentMethod#adminPayment');
        Route::post('payment/create',[PaymentController::class,'adminPaymentCreate'])->name('paymentMethod#adminPaymentCreate');
-    });
-
-    //  sale information
-
-    Route::group(['prefix' => 'info'],function(){
-       Route::get('saleInfo',[Controller::class,'adminSaleInfo'])->name('info#adminSaleInfo');
     });
 
     //  contact

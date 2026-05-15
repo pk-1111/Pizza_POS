@@ -10,7 +10,7 @@ use App\Models\PaymentHistory;
 
 class OrderController extends Controller
 {
-    //  order page
+    //  admin order page
     public function adminOrder(){
         $order = Order::select('orders.id','orders.status','orders.order_code','orders.created_at','users.name as user_name')
         ->leftJoin('users','orders.user_id','users.id')
@@ -24,7 +24,7 @@ class OrderController extends Controller
         return view('admin.orderBoard.order',compact('order'));
     }
 
-    // order details
+    // admin order details
 
     public function details($orderCode){
         $order = Order::select('orders.count as order_count','orders.order_code as order_code','orders.created_at as created_at','products.id as product_id','products.name as product_name','products.price as product_price','products.stock as available_stock','products.image as product_image','users.name as user_name','users.nickname as user_nickname','users.phone as user_phone','users.email as user_email','users.address as user_address')

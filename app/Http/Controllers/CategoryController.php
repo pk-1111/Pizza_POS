@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
@@ -47,7 +46,7 @@ class CategoryController extends Controller
     }
 
 
-    // update page
+    // update category page
 
 
     public function updatePage($id) {
@@ -59,7 +58,7 @@ class CategoryController extends Controller
         return view('admin.category.update',compact('category'));
     }
 
-     // update
+     // update category 
 
 
     public function update($id, Request $request) {

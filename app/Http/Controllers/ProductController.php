@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Discount;
@@ -11,7 +9,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller
 {
-    // add products page
+    // admin add products page
     public function addProducts(){
 
         $categories = Category::get();
@@ -20,7 +18,7 @@ class ProductController extends Controller
     }
 
 
-    // create product
+    // admin create product
     public function addProductsCreate(Request $request){
         $this->checkProductValidation($request,"create");
        $product = $this->getProductData($request);
@@ -40,12 +38,7 @@ class ProductController extends Controller
         'rate' => $request->rate
        ]);
 
-       
-
-
        }
-
-      
 
         Alert::success('Product Create', 'Product Created Successfully...');
 
@@ -55,19 +48,7 @@ class ProductController extends Controller
     }
 
 
-    // request product data
-    private function getProductData($request){
-        return [
-
-            'name'         =>  $request->name,
-            'price'        =>  $request->price,
-            'description'  =>  $request->description,
-            'category_id'  =>  $request->categoryId,
-            'stock'        =>  $request->stock
-
-
-        ];
-    }
+    
 
 
 
@@ -91,7 +72,7 @@ class ProductController extends Controller
         $request->validate($rules,$message);
     }
 
-     //  products list page
+     // admin products list page
     public function productsList($amt = 'default'){
 
         $products = Product::select('categories.title as category_name','products.id','products.name','products.image','products.price','products.category_id','products.stock')
@@ -114,7 +95,7 @@ class ProductController extends Controller
         return view('admin.List.productsList',compact('products'));
     }
 
-    //update page
+    //admin update page
 
     public function updatePage($id){
         $categories = Category::get();
@@ -123,7 +104,7 @@ class ProductController extends Controller
         return view('admin.products.edit',compact('product','categories'));
     }
 
-    //update product
+    //admin update product
 
     public function update(Request $request){
          $this->checkProductValidation($request,'update');
@@ -150,20 +131,13 @@ class ProductController extends Controller
             ]);
          }
 
-
-
         Alert::success('Product Update', 'Product Updated Successfully...');
-
-
-
 
                   return to_route('List#productsList');
 
-
-
     }
 
-    //detail product
+    // admin detail product
 
     public function detailProduct($id){
 
@@ -189,19 +163,34 @@ class ProductController extends Controller
           return back();
     }
 
-   public function createProduct(Request $request) {
 
-    $product = Product::create([
-        'name' => $request->name,
-        'price' => $request->price,
-        'category_id' => $request->category_id,
-        'image' => $fileName,
-    ]);
+    //  creat porudct 
+
+//    public function createProduct(Request $request) {
+
+//     $product = Product::create([
+//         'name' => $request->name,
+//         'price' => $request->price,
+//         'category_id' => $request->category_id,
+//         'image' => $fileName,
+//     ]);
+
+//    }
 
 
+   // request product data
+    private function getProductData($request){
+        return [
+
+            'name'         =>  $request->name,
+            'price'        =>  $request->price,
+            'description'  =>  $request->description,
+            'category_id'  =>  $request->categoryId,
+            'stock'        =>  $request->stock
 
 
-   }
+        ];
+    }
 
 
 

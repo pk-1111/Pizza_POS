@@ -11,12 +11,49 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ProfileController extends Controller
 {
-    // change password
+    // user change password direct page
     public function changePasswordPage(){
          return view('user.userProfile.changePasswordProfile');
     }
 
-     // edit user profile
+    // user change Password
+    public function changePassword(Request $request){
+
+          $this->passwordValidationCheck($request);
+
+          $currentLoginPassword = auth()->user()->password;
+
+          if(Hash::check($request->oldPassword , $currentLoginPassword)){
+               User::where('id',auth()->user()->id)->update([
+                 'password' => Hash::make($request->newPassword)
+               ]);
+
+                 Alert::success('Password Change', 'Password Change Successfully...');
+
+
+                 return to_route('userHome');
+
+
+                //  Auth::logout();
+
+                //  $request->session()->invalidate();
+                //  $request->session()->regenerateToken();
+
+                //  return redirect('/');
+
+
+          }else{
+              Alert::success('Error Message', 'Old Password Do Not Match ! Try Again');
+
+
+                 return back();
+
+          }
+      
+    }
+
+
+     // edit user profile direct page
 
     public function profile(){
         return view('user.userProfile.userProfile');
@@ -28,7 +65,7 @@ class ProfileController extends Controller
         return view('user.userProfile.editProfile');
     }
 
-     // update profile
+     // update user profile 
 
     public function updateProfile(Request $request){
       $this->profileValidationCheck($request);
@@ -99,53 +136,7 @@ class ProfileController extends Controller
         ]);
     }
 
-    // change Password
-    public function changePassword(Request $request){
-
-          $this->passwordValidationCheck($request);
-
-          $currentLoginPassword = auth()->user()->password;
-
-          if(Hash::check($request->oldPassword , $currentLoginPassword)){
-               User::where('id',auth()->user()->id)->update([
-                 'password' => Hash::make($request->newPassword)
-               ]);
-
-                 Alert::success('Password Change', 'Password Change Successfully...');
-
-
-                 return to_route('userHome');
-
-
-                //  Auth::logout();
-
-                //  $request->session()->invalidate();
-                //  $request->session()->regenerateToken();
-
-                //  return redirect('/');
-
-
-          }else{
-              Alert::success('Error Message', 'Old Password Do Not Match ! Try Again');
-
-
-                 return back();
-
-          }
-
-
-
-          /*
-           1. all must be validate
-
-           2. newPassword = confirmPassword
-           3. oldPasswrd must be same with current login account password
-           4. password change
-
-          */
-
-        //   return view('admin.profile.changePassword');
-    }
+    
 
  // check password validation
 

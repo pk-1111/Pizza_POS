@@ -8,14 +8,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class PaymentController extends Controller
 {
-   //  payment page
+   //  admin payment page
     public function adminPayment(){
         $payments = Payment::get();
         return view('admin.paymentMethod.payment',compact('payments'));
     }
 
 
-    // paymentcreate
+    //admin paymentcreate
 
     public function adminPaymentCreate(Request $request){
           $this->checkAdminPaymentValidation($request);
@@ -34,11 +34,6 @@ class PaymentController extends Controller
       return back();
     }
 
-
-
-
-
-
     // payment validation
 
       private function checkAdminPaymentValidation($request) {
@@ -47,7 +42,6 @@ class PaymentController extends Controller
             'accountNumber' => 'required|digits_between:8,20',
             'accountName' => 'required',
             'accountType' => 'required'
-
 
         ],[
 

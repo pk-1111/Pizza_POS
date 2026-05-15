@@ -240,8 +240,8 @@
                                 <div class="col-lg-12">
                                     <div class="border-bottom rounded ">
 
-                                        <textarea name="comment" id="commentTextarea" class="form-control border-0 shadow" cols="30" rows="8"  
-                                                                                      placeholder="Your Review *" spellcheck="false"></textarea>
+                                        <textarea name="comment" id="commentTextarea" class="form-control border-0 shadow" cols="30" rows="8"
+                                            placeholder="Your Review *" spellcheck="false"></textarea>
 
                                     </div>
                                 </div>

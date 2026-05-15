@@ -13,7 +13,6 @@ class ProfileController extends Controller
 {
     //  direct chage password page
 
-     // direct  admin home page
     public function changePasswordPage(){
 
           return view('admin.profile.changePassword');
@@ -55,21 +54,11 @@ class ProfileController extends Controller
 
 
 
-          /*
-           1. all must be validate
-
-           2. newPassword = confirmPassword
-           3. oldPasswrd must be same with current login account password
-           4. password change
-
-          */
-
-        //   return view('admin.profile.changePassword');
     }
 
 
 
-    // direct profile
+    // direct admin profile page
 
 
     public function profile(){
@@ -80,7 +69,7 @@ class ProfileController extends Controller
 
 
 
-    // edit profile
+    // edit admin profile page
 
     public function profileEdit(){
 
@@ -89,7 +78,7 @@ class ProfileController extends Controller
     }
 
 
-   // update profile
+   // update admin profile
 
     public function updateProfile(Request $request){
      $this->profileValidationCheck($request);
@@ -126,7 +115,7 @@ class ProfileController extends Controller
     }
 
 
-    // request user profile data
+    // request admin profile data
 
     private function requestProfileData($request){
 

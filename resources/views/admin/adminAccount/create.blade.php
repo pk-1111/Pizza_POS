@@ -8,10 +8,6 @@
 
         <!-- Main Content -->
         <div id="content">
-
-
-
-
             <div class="container">
                 <div class="row">
                     <div class="col-6 offset-3 card p-3 shadow-sm rounded">

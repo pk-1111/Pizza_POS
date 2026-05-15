@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class UserShopController extends Controller
 {
-    // shop
+    // shop page direct 
 
     public function shopPage($amt = 'default'){
 
@@ -31,11 +31,11 @@ class UserShopController extends Controller
     }
 
 
+    // sorting Type
 
     public function sortingType(Request $request)
 {
-    // ၁။ Query အခြေခံ တည်ဆောက်ခြင်း
-    // Category Name ပါ တစ်ခါတည်းသိချင်ရင် Join သုံးထားတာ ပိုကောင်းပါတယ်
+   
    
       $products = Product::select('categories.title as category_name','products.id','products.name','products.image','products.price','products.category_id','products.stock')
         ->leftJoin('categories','products.category_id','categories.category_id','categories.title as category_name')
@@ -50,12 +50,12 @@ class UserShopController extends Controller
         $products = $products->where('products.price', '<=', $request->maxPrice);
     }
 
-    // ၄။ Sorting (A-Z, Price Low to High စသည်ဖြင့်)
-    $sortColumn = 'products.created_at'; // Default sort
+    //  Sorting (A-Z, Price Low to High)
+    $sortColumn = 'products.created_at'; 
     $sortDirection = 'desc';
 
     if ($request->filled('sortingType')) {
-        $sortData = explode(',', $request->sortingType); // "name,asc" ကို split လုပ်တာပါ
+        $sortData = explode(',', $request->sortingType);
         if (count($sortData) == 2) {
             $sortColumn = 'products.' . $sortData[0];
             $sortDirection = $sortData[1];

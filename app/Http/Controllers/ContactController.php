@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\UserContact;
-use Illuminate\Http\Request;
+
 
 class ContactController extends Controller
 {
 
-      // customer contact
+      // admin customer contact page
 
     public function customerContact(){
 
