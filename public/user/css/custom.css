@@ -1,0 +1,420 @@
+/*
+   custom.css - 2025 Modern Starter
+   Best practice: Define variables at the root for site-wide updates
+*/
+:root {
+    --primary-color: #0073aa;    /* Branding Color */
+    --text-dark: #333333;       /* Main text */
+    --bg-light: #f4f4f4;        /* Backgrounds */
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --border-radius: 8px;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Custom Heading Style */
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 2025 Modern Card Component */
+.custom-card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Call-to-Action Button */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness Example */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+}
+
+/* custom.css or style.css file */
+
+/* Image container ကို ပြင်ဆင်ခြင်း */
+.fruite-item .fruite-img {
+    overflow: hidden; /* ပုံကို ဘောင်အပြင် မထွက်စေရန် ဖွက်ထားသည် */
+}
+
+/* Image အပေါ် Hover လုပ်ရင် Transition effect လေးနဲ့ ကြီးလာစေဖို့ */
+.fruite-item .fruite-img img {
+    transition: transform 0.5s ease; /* 0.5 စက္ကန့်အတွင်း ချောမွေ့စွာ ပြောင်းလဲစေသည် */
+    transform-origin: center center;
+}
+
+/* Mouse တင်လိုက်တဲ့အခါ ပုံရဲ့ အရွယ်အစားကို 1.1 ဆ (110%) ကြီးစေသည် */
+.fruite-item:hover .fruite-img img {
+    transform: scale(1.1);
+}
+
+/* Card တစ်ခုလုံးကိုပါ Hover လုပ်ရင် နည်းနည်းလေး ကြွတက်လာအောင် (Shadow Effect) */
+.fruite-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fruite-item:hover {
+    transform: translateY(-5px); /* Card ကို အပေါ် ၅ pixel ရွှေ့လိုက်သည် */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important; /* Shadow ကို ပိုထူပေးလိုက်သည် */
+}
+
+
+
+
+/*
+   custom.css - 2025 Modern Starter
+   Best practice: Define variables at the root for site-wide updates
+*/
+:root {
+    --primary-color: #0073aa;    /* Branding Color */
+    --text-dark: #333333;       /* Main text */
+    --bg-light: #f4f4f4;        /* Backgrounds */
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --border-radius: 8px;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Custom Heading Style */
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 2025 Modern Card Component */
+.custom-card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Call-to-Action Button */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness Example */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+}
+
+/* custom.css or style.css file */
+
+/* Image container ကို ပြင်ဆင်ခြင်း */
+.fruite-item .fruite-img {
+    overflow: hidden; /* ပုံကို ဘောင်အပြင် မထွက်စေရန် ဖွက်ထားသည် */
+}
+
+/* Image အပေါ် Hover လုပ်ရင် Transition effect လေးနဲ့ ကြီးလာစေဖို့ */
+.fruite-item .fruite-img img {
+    transition: transform 0.5s ease; /* 0.5 စက္ကန့်အတွင်း ချောမွေ့စွာ ပြောင်းလဲစေသည် */
+    transform-origin: center center;
+}
+
+/* Mouse တင်လိုက်တဲ့အခါ ပုံရဲ့ အရွယ်အစားကို 1.1 ဆ (110%) ကြီးစေသည် */
+.fruite-item:hover .fruite-img img {
+    transform: scale(1.1);
+}
+
+/* Card တစ်ခုလုံးကိုပါ Hover လုပ်ရင် နည်းနည်းလေး ကြွတက်လာအောင် (Shadow Effect) */
+.fruite-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fruite-item:hover {
+    transform: translateY(-5px); /* Card ကို အပေါ် ၅ pixel ရွှေ့လိုက်သည် */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important; /* Shadow ကို ပိုထူပေးလိုက်သည် */
+}
+
+
+
+
+/* Section Title Style */
+.delivery-section {
+
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.section-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #ff6600; /* လိမ္မော်ရောင် ကွင်းစကွင်းပိတ် */
+}
+
+/* Card Main Style */
+.delivery-card {
+    background: rgba(255, 255, 255, 0.03); /* မှန်ကြည်ပုံစံ ခပ်မှိန်မှိန် */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: relative;
+
+
+    /* ထောင့်ဖြတ် အကွေးဒီဇိုင်း (အပေါ်ဘယ်နဲ့ အောက်ညာကို ပိုကွေးထားတာ) */
+    border-radius: 80px 20px 80px 20px;
+    transition: 0.3s ease;
+}
+
+.delivery-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(236, 233, 233, 0.6);
+
+}
+
+/* Card Image */
+.card-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* အစားအသောက်ပုံကို အဝိုင်းလုပ်ထားတာ */
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+/* Content Area */
+.card-content {
+    text-align: left;
+    color: white;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Price and Buttons */
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.order-btn {
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-btn {
+    background: transparent;
+    border: 1px solid #ff6600;
+    color: #ff6600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* spin pizza */
+
+
+
+@keyframes spin-and-float{
+    0%{transform: rotate(0deg)    translateY(0px)   ;}
+    50%{transform: rotate(180deg)   translateY(-20px)    ;}
+    100%{transform: rotate(360deg)   translateY(0px)    ;}
+}
+
+.pizza_spin{
+    width:400px;
+    height: 400px;
+    object-fit: cover ;
+    border-radius: 50%;
+    animation: spin-and-float  8s ease-in-out infinite;
+    filter:brightness(1.0) contrast(0.8) ;
+}
+
+.pizza_spin:hover{
+    animation-play-state: paused;
+}
+
+@keyframes blinker{
+    0%{opacity: 1.0;}
+    50%{opacity: 0.3;}
+    100%{opacity: 1.0;}
+}
+
+.blink-text{
+    animation:blinker 1.5s linear infinite;
+
+    color:#ff6600;
+
+    font-size: 90px;
+
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
+}
+
+.dis_text{
+    animation:blinker 1.5s linear infinite;
+
+    color:#ff6600;
+
+    font-size: 30px;
+
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
+}
+
+/* Steam Container - အငွေ့တွေ ထွက်မယ့် နေရာကို ပုံရဲ့ အလယ်မှာ ထားမယ် */
+.steam-container {
+    position: absolute;
+    top: 20%; /* ပုံရဲ့ အပေါ်နားကနေ စထွက်မယ် */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+    pointer-events: none; /* Mouse နဲ့ ထိရင် အနှောင့်အယှက် မဖြစ်အောင် */
+}
+
+/* အငွေ့ တစ်ချောင်းချင်းစီ၏ ပုံစံ */
+.steam-container span {
+    position: relative;
+    bottom: 0;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: #fff; /* အဖြူရောင် အငွေ့ */
+    border-radius: 50%;
+    filter: blur(10px); /* အငွေ့ဖြစ်တဲ့အတွက် ဝါးပေးရမယ် */
+    opacity: 0;
+    animation: steam-rise 5s linear infinite;
+    animation-delay: calc(var(--i) * -0.5s); /* တစ်ခုချင်းစီ ထွက်တဲ့အချိန် မတူအောင် လုပ်ခြင်း */
+}
+
+/* အငွေ့ အပေါ်တက်သွားမည့် Animation */
+@keyframes steam-rise {
+    0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.2; /* အငွေ့က နည်းနည်းပဲ မြင်ရမယ် */
+    }
+    50% {
+        transform: translateY(-100px) scaleX(4); /* အပေါ်တက်လေ ဘေးကားလေ */
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-200px) scaleX(8);
+    }
+}
+
+
+
+.pizza_rain{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.pizza_rain img{
+    position: absolute;
+    width: 40px;
+    filter:brightness(1.2) contrast(1.1) drop-shadow(0 0 5px rgba(255,255,255,0.5));
+    opacity: 0.9 !important;
+    top:-50px;
+    animation: rain 5s linear infinite;
+    animation-duration: calc(5s + var(--i) * 2s);
+}
+
+@keyframes rain{
+
+    0%{
+        top:-10px;
+        transform: translateX(0) rotate(0deg);
+        filter: blur(0px);
+        opacity: 0.8;
+    }
+
+    70%{
+        filter: blur(0px);
+        opacity: 0.8;
+    }
+
+    85%{
+        filter: blur(4px);
+        opacity: 0.4;
+    }
+
+     100%{
+        top: 110%;
+        transform: translateX(100px) rotate(360deg);
+        filter: blur(15px);
+        opacity: 0;
+    }
+
+}
