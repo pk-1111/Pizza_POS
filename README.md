@@ -1,59 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+🍕 Pizza Ordering System (E-commerce Platform)
+A fully functional e-commerce application designed for seamless food ordering. This project focuses on the complete order lifecycle, from product discovery to real-time order tracking, managed via a secure admin control panel.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+🌐 Project Overview & Demo
+https://kks-portfolio.vercel.app/
 
-## About Laravel
+🔗 View Full Case Study on My Portfolio
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+✨ Key Features
+Secure User Management: Fully functional authentication system (Login/Register) featuring profile management and secure password updates.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Comprehensive Order Lifecycle: Dynamic shopping cart allowing users to add, update, or remove items. Upon payment, orders move to a 'Pending' state for admin review.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Interactive Social Proof: Integrated Star Rating and Review system, enabling customers to share experiences and read community feedback.
 
-## Learning Laravel
+Smart Product Discovery: Advanced filtering and search functionality, including Min/Max price ranges and specific product detail views.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Order Tracking & History: Dedicated customer dashboard to monitor real-time order status (Pending/Accepted/Rejected) and view transaction history.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Admin Control Panel: A secure backend for administrators to manage incoming orders and update store availability.
 
-## Laravel Sponsors
+Modern UI/UX: Built with a focus on responsiveness and clean design using Bootstrap, ensuring a smooth experience on both desktop and mobile devices.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+🛠️ Tech Stack
+Backend: Laravel (PHP)
 
-### Premium Partners
+Frontend: Bootstrap UI / JavaScript
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Database: MySQL
 
-## Contributing
+⚙️ Local Installation Guide
+Clone the repository:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Bash
+git clone https://github.com/pk-1111/Pizza_POS.git
+cd pizza-ordering-system
+Install dependencies:
 
-## Code of Conduct
+Bash
+composer install
+npm install
+Environment Setup:
+Copy .env.example to .env and configure your database.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Bash
+php artisan key:generate
+Migrate & Seed:
 
-## Security Vulnerabilities
+Bash
+php artisan migrate --seed
+Run the application:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Bash
+php artisan serve
+👤 Author
+Kyaw Kaung San
 
-## License
+Full-Stack Developer
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+LinkedIn | Portfolio
